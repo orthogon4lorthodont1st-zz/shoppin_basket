@@ -67,9 +67,13 @@ function processArgs(basketItems) {
 
 function displayOnConsole(processedItems) {
   console.log(`Subtotal: ${converter(processedItems.subTotal)}`);
-  processedItems.reasons.forEach(type => {
-    console.log(`Deal: ${type}`);
-  });
+  if (processedItems.reasons.length === 0) {
+    console.log('(No deals available)');
+  } else {
+    processedItems.reasons.forEach(type => {
+      console.log(`Deal: ${type}`);
+    });
+  }
   console.log(
     `Total: ${converter(processedItems.subTotal - processedItems.discount)}`,
   );
