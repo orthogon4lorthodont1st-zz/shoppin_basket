@@ -9,7 +9,6 @@ module.exports = {
     apples: 100,
   },
 
-  // 1x bread discounted if 2x soup is bought.
   percentageDiscount: {
     apples: 0.1,
     bread: 0.5,

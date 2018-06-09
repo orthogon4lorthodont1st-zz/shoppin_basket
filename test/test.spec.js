@@ -68,7 +68,7 @@ describe('#Shopping basket Tests', () => {
       const discount = 2 * percentageDiscount.apples * priceList.apples;
 
       expect(calculateDiscount(items).discount).to.eq(discount);
-      expect(calculateDiscount(items).reasons).to.eql([
+      expect(calculateDiscount(items).deals).to.eql([
         `${discountTypes.apples} - ${converter(discount)}`,
       ]);
 
@@ -80,7 +80,7 @@ describe('#Shopping basket Tests', () => {
       const discount = percentageDiscount.bread * priceList.bread;
 
       expect(calculateDiscount(items).discount).to.eq(discount);
-      expect(calculateDiscount(items).reasons).to.eql([
+      expect(calculateDiscount(items).deals).to.eql([
         `${discountTypes.soup} - ${converter(discount)}`,
       ]);
 
@@ -92,7 +92,7 @@ describe('#Shopping basket Tests', () => {
       const discount = percentageDiscount.bread * priceList.bread;
 
       expect(calculateDiscount(items).discount).to.eq(discount);
-      expect(calculateDiscount(items).reasons).to.eql([
+      expect(calculateDiscount(items).deals).to.eql([
         `${discountTypes.soup} - ${converter(discount)}`,
       ]);
 
@@ -104,7 +104,7 @@ describe('#Shopping basket Tests', () => {
       const discount = percentageDiscount.bread * priceList.bread;
 
       expect(calculateDiscount(items).discount).to.eq(discount);
-      expect(calculateDiscount(items).reasons).to.eql([
+      expect(calculateDiscount(items).deals).to.eql([
         `${discountTypes.soup} - ${converter(discount)}`,
       ]);
 
@@ -126,7 +126,7 @@ describe('#Shopping basket Tests', () => {
       const discount = 3 * percentageDiscount.bread * priceList.bread;
 
       expect(calculateDiscount(items).discount).to.eq(discount);
-      expect(calculateDiscount(items).reasons).to.eql([
+      expect(calculateDiscount(items).deals).to.eql([
         `${discountTypes.soup} - ${converter(discount)}`,
       ]);
 
